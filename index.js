@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const format = require('date-format');
 require('dotenv').config();
-const port = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
     res.status(200).send("<h1>SALAM DUNYA</h1>");
@@ -54,6 +54,6 @@ app.get('/api/v1/:token/:id', (req, res) => {
     })
 })
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 })
