@@ -5,7 +5,7 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-    res.status(200).send("<h1>SALAM DUNYA</h1>");
+    res.status(200).send("<h1>Hello World</h1>");
 })
 
 app.get('/api/v1/instagram', (req, res) => {
@@ -54,6 +54,4 @@ app.get('/api/v1/:token/:id', (req, res) => {
     })
 })
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-})
+app.listen(PORT)
